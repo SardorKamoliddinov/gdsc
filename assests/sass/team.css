@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  a{
+    color: inherit;
+  }
+  
+  header{
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+    nav{
+        width: 100%;
+        height: 80px;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid gray;
+        background-color: white;
+        box-shadow: 0 0 5px 0 gray;
+        gap: 30px;
+        position: fixed;
+        font-family: 'Open Sans', sans-serif;
+    }
+        #check{
+            display: none;
+        }
+        .logo img{
+                height: 40px;
+                width: 50px;
+            }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+            ul li:hover{
+                    color: blue;
+                    transition: .4s;
+                }
+        label{
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+        }
+        .cover{
+            display: none;
+        }
+@media(max-width:350px){
+    header{
+        margin-bottom: 0;
+    }
+        nav{
+            padding: 0 10px;
+        }
+            label{
+                display: block;
+            }
+            .cover{
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                backdrop-filter: blur(5px);
+                top: 0;
+                left: 0;
+            }
+            #check:checked ~ .cover{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                flex-direction: column;
+                width: 50%;
+                height: 100vh;
+                top: 0;
+                left: -100%;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s;
+                z-index: 20;
+                color: black;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+
+@media(max-width:768px){
+    header{
+        margin-bottom: 0;
+    }
+        nav{
+            padding: 0 30px;
+        }
+            label{
+                display: block;
+            }
+            .cover{
+                width: 100%;
+                height: 100vh;
+                backdrop-filter: blur(5px);
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            #check:checked ~ .cover{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                flex-direction: column;
+                width: 50%;
+                height: 100vh;
+                backdrop-filter: blur(5px);
+                top: 0;
+                background-color: #b7a4a4;
+                left: -100%;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s;
+                z-index: 20;
+                color: black;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 50px;
+    padding: 0px 30px;
+  }
+  
+  .title {
+    font-size: 56px;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  .section-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  
+  .section-cards .card .img img {
+    width: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+  }
+  .section-cards .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    transition: 1s;
+  }
+  
+  .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    transform: scale(1.01);
+  }
+  
+  .username {
+    color: #7455dd;
+    font-size: 20px;
+  }
+  
+  a {
+    font-size: 16px;
+  }
+  
