@@ -35,6 +35,7 @@ header nav {
           box-shadow: 0 0 5px 0 gray;
   gap: 30px;
   position: fixed;
+  z-index: 100;
   font-family: 'Open Sans', sans-serif;
 }
 
